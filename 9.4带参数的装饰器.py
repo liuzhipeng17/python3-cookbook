@@ -15,7 +15,7 @@ def logged(level, name=None, message=None):
         log = logging.getLogger(logname)
         logmsg = message if message else func.__name__
         
-        @wraps
+        @wraps(func)
         def wrapper(*args, **kwargs):
             log.log(level, logmsg)
             return func(*args, **kwargs)
