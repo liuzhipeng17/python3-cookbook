@@ -12,3 +12,12 @@ def logged(func=None, *, level=logging.DEBUG, name=None, message=None):
         return partial(logged, level=level, name=name, message=messag)
     
      
+from functools import partial
+ 
+def mod( n, m ):
+  return n % m
+ 
+mod_by_100 = partial( mod, 100 )
+ 
+print mod( 100, 7 )  # 2
+print mod_by_100( 7 )  # 2
