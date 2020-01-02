@@ -1,3 +1,4 @@
+'''
 quesitons:
     你想排序类型相同的对象，但是他们不支持原生的比较操作
     
@@ -6,7 +7,7 @@ solutions:
     这个值会被sorted用来排序这些对象。
     
     比如，如果你在应用程序里面有一个user实例，并且你希望通过他们的user_id属性进行排序，
-    
+''' 
 class User:
 
     def __init__(self, user_id):
